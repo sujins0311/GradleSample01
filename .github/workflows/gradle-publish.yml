@@ -16,18 +16,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Setup JDK
+    - name: setup jdk11
       uses: actions/setup-java@v3
       with:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: Init with Gradle
+    - name: init with gradle
       uses: gradle/gradle-build-action@v2
 
     - run: gradle init
 
-    - name: Build with Gradle
+    - name: Build with gradle
       uses: gradle/gradle-build-action@v2
       with:
         gradle-version: 7.5.1
